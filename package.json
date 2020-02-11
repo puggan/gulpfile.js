@@ -1,0 +1,19 @@
+{
+  "name": "gulpfile",
+  "version": "1.0.0",
+  "description": "Generic gulpfile",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/puggan/gulpfile.js.git"
+  },
+  "author": "Puggan Sundragon <puggan@sundragon.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/puggan/gulpfile.js/issues"
+  },
+  "homepage": "https://github.com/puggan/gulpfile.js#readme"
+}
