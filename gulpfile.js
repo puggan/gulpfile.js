@@ -10,7 +10,6 @@ const plug = {
     imagemin: require('gulp-imagemin'),
     jsx: require('gulp-jsx'),
     less: require('gulp-less'),
-    pngquant: require("gulp-pngquant"),
     rename: require('gulp-rename'),
     sourcemaps: require('gulp-sourcemaps'),
     typescript: require('gulp-typescript'),
@@ -18,6 +17,9 @@ const plug = {
     uglifyjsES: require('gulp-uglify-es').default,
     uglifyjs: require('gulp-uglify'),
     watch: require('gulp-watch'),
+};
+const imageminPlugins = {
+    optipng: require("imagemin-optipng"),
 };
 
 const fontPath = 'fonts/**/*.css';
@@ -214,7 +216,9 @@ gulp.task("fonts-watch", fontWatch);
 const imgMain = (s) => s
     .pipe(plug.imagemin({
         progressive: true,
-        use: [plug.pngquant()]
+        use: [
+            imageminPlugins.optipng
+        ]
     }))
     .pipe(gulp.dest('../build/img/'))
     .pipe(plug.debug({title: 'img:'}));
